@@ -1,10 +1,15 @@
+#Créons une autre variable pour décider du fonctionnement ou de l'arret du scrip
+FonctionnementScript = 0
 #Création de la première variable
-surnom = input("Entrez votre surnom : ")
+#surnom = input("Entrez votre surnom : ")
 
 #Testons les valeurs saisies par l'utilisateur
-if surnom == "":
-    print("Vous devez absolument saisir votre surnom")
-elif not surnom.isalpha():
-    print("Vous devez saisir une suite de lettres formant votre surnom")
-else :
-    print("Bonjour",surnom, "merci d'avoir tester mon script")
+while FonctionnementScript == 0 :
+    surnom = input("Entrez votre surnom : ")
+    if not surnom.isalpha():
+        print("Vous devez saisir une suite de lettres formant votre surnom")
+        FonctionnementScript == 0
+    else :
+        print("Bonjour",surnom, "merci d'avoir tester mon script")
+        FonctionnementScript == 1
+        break
